@@ -1,375 +1,435 @@
 /* Reset básico */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
-  height: 100%;
-  font-family: Arial, sans-serif;
-  background-color: #000;
-  color: #fff;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
 }
 
 /* HEADER */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #FF0099;
-  padding: 10px 30px;
-  height: 100px;
-  overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF0099;
+    padding: 10px 30px;
+    height: 100px;
+    overflow: hidden;
 }
 
 .logo_esquerda,
 .logo_direita {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .logo_esquerda img {
-  height: 150px;
-  object-fit: contain;
+    height: 150px;
+    object-fit: contain;
 }
 
 .logo_direita img {
-  height: 300px;
-  object-fit: contain;
+    height: 300px;
+    object-fit: contain;
 }
 
 .central {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.4;
 }
 
 /* MAIN */
 .main {
-  display: flex;
-  padding: 40px 30px;
-  gap: 40px;
-  align-items: flex-start;
+    display: flex;
+    padding: 40px 30px;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.conteudo img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* LATERAL agrupando navegação extra e sidebar */
 .lateral {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
+
+/* REDES SOCIAIS */
 .redes_sociais {
-  margin-top: 20px;
-  margin-bottom: 40px; /* aumenta o espaço abaixo dos ícones */
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px; /* aumenta o espaço abaixo dos ícones - MANTIDO PARA DESKTOP */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
 }
 
 .redes_sociais a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .redes_sociais a img {
-  width: 30px;
-  height: 30px;
-  filter: brightness(0) saturate(100%) invert(41%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(90%);
-  transition: filter 0.3s ease, transform 0.3s ease;
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) saturate(100%) invert(41%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(90%);
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .redes_sociais a:hover img {
-  filter: brightness(0) saturate(100%) invert(30%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(100%);
-  transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(30%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(100%);
+    transform: scale(1.1);
 }
 
 
 /* NAVEGAÇÃO EXTRA */
 .navegacao_extra {
-  background-color: #000;
-  padding: 20px;
-  width: 220px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color: #000;
+    padding: 20px;
+    width: 220px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu_ingressos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu_ingressos > a {
-  color: #FF0099;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 8px;
-  transition: color 0.3s ease;
+    color: #FF0099;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
 }
 
 .menu_ingressos > a:hover {
-  color: #fff;
+    color: #fff;
 }
 
 .sub_links {
-  display: flex;
-  gap: 15px;
-  align-items: center;
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
 .sub_links a {
-  color: #FF0099;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
+    color: #FF0099;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
 .sub_links a:hover {
-  color: #fff;
+    color: #fff;
 }
 
 .sub_links span {
-  color: #ff0099;
-  font-size: 16px;
+    color: #ff0099;
+    font-size: 16px;
 }
 
 /* SIDEBAR */
 .side_bar {
-  width: 220px;
-  background-color: #fff;
-  border-radius: 20px;
-  padding: 20px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  
+    width: 220px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .side_bar nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .side_bar nav ul li a {
-  text-decoration: none;
-  color: #6b6b6b;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: block;
+    text-decoration: none;
+    color: #6b6b6b;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
 }
 
 .side_bar nav ul li a:hover {
-  background-color: #e0e0e0;
-  color: #333;
+    background-color: #e0e0e0;
+    color: #333;
 }
 
 .side_bar nav ul li.atual a {
-  background-color: #ffffff;
-  color: #333;
+    background-color: #FF0099;
+    color: #fff;
 }
 
-.realizacao {
-  margin-top: 10px;
-  text-align: center;
+/* REALIZAÇÃO - VERSÃO DESKTOP (dentro do side_bar) */
+.realizacao_desktop {
+    margin-top: 250px;
+    text-align: center;
 }
 
-.realizacao h3 {
-  color: #ff0099;
-  font-size: 16px;
-  margin-bottom: 10px;
+.realizacao_desktop h3 {
+    color: #FF0099;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
-.realizacao img {
-  max-width: 100%;
-  margin-bottom: 10px;
-  background-color: #fff;
-  padding: 5px;
-  border-radius: 8px;
+.realizacao_desktop img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 8px;
 }
 
-
-/* MAIN */
-.main {
-  display: flex;
-  align-items: flex-start;
-  padding: 40px 30px;
-  gap: 40px;
+/* REALIZAÇÃO - VERSÃO MOBILE (fora do side_bar/lateral) */
+.realizacao_mobile_footer {
+    display: none; /* Escondido por padrão (desktop) */
 }
 
-/* SIDEBAR */
-.side_bar {
-  width: 220px;
-  background-color: #fff;
-  border-radius: 20px;
-  padding: 20px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.side_bar nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.side_bar nav ul li a {
-  text-decoration: none;
-  color: #6b6b6b;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: block;
-}
-
-.side_bar nav ul li a:hover {
-  background-color: #e0e0e0;
-  color: #333;
-}
-
-.side_bar nav ul li.atual a {
-  background-color: #FF0099;
-  color: #fff;
-}
-
-.realizacao {
-  margin-top: 50px;
-  text-align: center;
-}
-
-.realizacao h3 {
-  color: #FF0099;
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.realizacao img {
-  max-width: 100%;
-  margin-bottom: 10px;
-  background-color: #fff;
-  padding: 5px;
-  border-radius: 8px;
-}
 
 /* CONTEÚDO ÁREA */
 .conteudo_area {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* BANNER */
 .banner {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  display: block;
-  margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
 }
 
 /* BLOCO DE CONTEÚDO */
 .conteudo_bloco {
-  background-color: #000000;
-  padding-bottom: 100px;
-  max-width: 800px;
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color: #9b9b9b;
+    padding-bottom: 100px;
+    max-width: 800px;
+    min-height: 800px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* TEXTO */
 .conteudo {
-  padding: 20px;
-  color: #000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    padding: 20px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .conteudo h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #fff;
-  text-align: center;
-  
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
 }
 
 .conteudo p {
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: left;
-}
-/* CONTEÚDO ÁREA (ou onde você tem as regras para o .conteudo img) */
-.conteudo img {
-    /* Esta linha é a mais importante. Ela diz que a imagem terá no máximo 600 pixels. */
-    max-width: 600px; 
-    
-    /* As regras abaixo garantem que a imagem seja centralizada e mantenha a proporção: */
-    height: auto; 
-    display: block;
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
-    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
 }
 
-/* RESPONSIVO */
+
+/* === RESPONSIVO === */
+
+/* Tablets e Mobile (até 768px) */
 @media (max-width: 768px) {
-  .main {
-    flex-direction: column;
-    align-items: center;
-  }
+    .main {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 10px; 
+        gap: 20px; 
+    }
+    
+    /* 1. NAVEGAÇÃO ESSENCIAL (LATERAL) */
+    .lateral {
+        width: 100%;
+        order: 1; 
+        padding: 0; 
+        gap: 20px; 
+    }
 
-  .navegacao_extra {
-    flex-direction: column;
-    padding: 20px 10px;
-  }
+    /* Centraliza a navegação dentro da lateral */
+    .navegacao_extra,
+    .side_bar {
+        max-width: 400px; 
+        width: 100%;
+        margin-left: auto; 
+        margin-right: auto;
+    }
 
-  .side_bar {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+    /* --- OTIMIZAÇÕES DA SIDEBAR MOBILE --- */
+    
+    /* 1. Compactar Redes Sociais */
+    .redes_sociais {
+        margin-bottom: 10px; /* Reduz a margem inferior */
+        margin-top: 10px; /* Reduz a margem superior */
+    }
+    
+    /* 2. Compactar links de navegação */
+    .side_bar nav ul {
+        /* Transforma a lista vertical em horizontal/grid */
+        flex-direction: row; 
+        flex-wrap: wrap; /* Permite quebrar linha se necessário */
+        justify-content: center;
+        gap: 5px; /* Reduz o espaçamento entre os links */
+    }
 
-  .conteudo_area {
-    width: 100%;
-  }
+    .side_bar nav ul li {
+        margin: 5px; /* Pequena margem para separar os blocos */
+    }
 
-  .banner {
-    max-width: 100%;
-  }
+    .side_bar nav ul li a {
+        font-size: 14px; /* Reduz um pouco o tamanho da fonte */
+        padding: 6px 10px; /* Reduz o padding interno */
+    }
 
-  .conteudo_bloco {
-    border-radius: 0;
-  }
+    .side_bar {
+        /* Reduz o padding vertical do bloco side_bar */
+        padding: 10px 20px; 
+    }
+    
+    /* Esconde a realização desktop */
+    .realizacao_desktop {
+        display: none; 
+    }
 
-  .conteudo h2 {
-    font-size: 20px;
-  }
+    /* 2. CONTEÚDO PRINCIPAL */
+    .conteudo_area {
+        width: 100%;
+        order: 2; 
+        padding: 0; 
+    }
 
-  .conteudo p {
-    font-size: 15px;
-  }
+    .conteudo_bloco {
+        width: 100%;
+        max-width: none; 
+    }
+    
+    /* 3. RODAPÉ MOBILE (REALIZAÇÃO) */
+    .realizacao_mobile_footer {
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        padding: 20px 10px; 
+        background-color: #fff;
+        border-radius: 20px;
+        margin-top: 10px;
+        order: 3; 
+        max-width: 400px; 
+    }
+    
+    .realizacao_mobile_footer h3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .realizacao_mobile_footer img {
+        max-width: 30%; 
+        margin: 5px;
+    }
+
+    /* Ajustes finais */
+    .banner {
+        max-width: 100%;
+    }
+
+    .conteudo_bloco {
+        border-radius: 0;
+    }
+
+    .conteudo h2 {
+        font-size: 20px;
+    }
+
+    .conteudo p {
+        font-size: 15px;
+    }
+}
+
+
+
+/* Smartphones (até 480px) - HEADER Otimizado */
+@media (max-width: 480px) {
+    .header {
+        flex-wrap: wrap; 
+        height: auto; 
+        padding: 10px; 
+    }
+
+    .central {
+        order: 2; 
+        width: 100%; 
+        margin: 5px 0 0 0; 
+    }
+    
+    .central h2 {
+        font-size: 10px; 
+    }
+
+    .logo_esquerda,
+    .logo_direita {
+        order: 1; 
+        display: flex; 
+        align-items: center;
+    }
+    
+    .logo_esquerda {
+        margin-right: auto; 
+    }
+    
+    .logo_direita {
+        margin-left: auto; 
+    }
+
+    .logo_esquerda img {
+        height: 60px; 
+    }
+
+    .logo_direita img {
+        height: 80px; 
+    }
 }

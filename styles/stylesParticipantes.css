@@ -190,7 +190,7 @@ html, body {
 }
 
 .realizacao {
-  margin-top: 30px;
+  margin-top: 250px;
   text-align: center;
 }
 
@@ -209,7 +209,7 @@ html, body {
 }
 
 /* CONTEÚDO BLOCO */
-.conteudo_bloco {
+.conteudo_area {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -223,12 +223,13 @@ html, body {
 }
 
 /* CONTEÚDO */
-.conteudo {
+ .conteudo_bloco {
   padding: 20px;
-  color: #000;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .conteudo h2 {
@@ -253,6 +254,7 @@ html, body {
   max-width: 800px;
   gap: 20px;
   transition: transform 0.3s ease;
+ 
 }
 
 .participante:hover {
@@ -284,55 +286,175 @@ html, body {
   flex-direction: column;
   justify-content: center;
 }
+/* REALIZAÇÃO - VERSÃO MOBILE (fora do side_bar/lateral) */
+.realizacao_mobile_footer {
+    display: none; /* Escondido por padrão (desktop) */
+}
 
-/* RESPONSIVO */
+/* === RESPONSIVO === */
+
+/* Tablets e Mobile (até 768px) */
 @media (max-width: 768px) {
-  .main {
-    flex-direction: column;
-  }
+    .main {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 10px; 
+        gap: 20px; 
+    }
+    
+    /* 1. NAVEGAÇÃO ESSENCIAL (LATERAL) */
+    .lateral {
+        width: 100%;
+        order: 1; 
+        padding: 0; 
+        gap: 20px; 
+    }
+    .participante{
+      flex-direction: column;
+    }
 
-  .lateral {
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
+    /* Centraliza a navegação dentro da lateral */
+    .navegacao_extra,
+    .side_bar {
+        max-width: 400px; 
+        width: 100%;
+        margin-left: auto; 
+        margin-right: auto;
+    }
 
-  .navegacao_extra,
-  .side_bar {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+    /* --- OTIMIZAÇÕES DA SIDEBAR MOBILE --- */
+    
+    /* 1. Compactar Redes Sociais */
+    .redes_sociais {
+        margin-bottom: 10px; /* Reduz a margem inferior */
+        margin-top: 10px; /* Reduz a margem superior */
+    }
+    
+    /* 2. Compactar links de navegação */
+    .side_bar nav ul {
+        /* Transforma a lista vertical em horizontal/grid */
+        flex-direction: row; 
+        flex-wrap: wrap; /* Permite quebrar linha se necessário */
+        justify-content: center;
+        gap: 5px; /* Reduz o espaçamento entre os links */
+    }
 
-  .conteudo_bloco {
-    align-items: stretch;
-  }
+    .side_bar nav ul li {
+        margin: 5px; /* Pequena margem para separar os blocos */
+    }
 
-  .conteudo {
-    align-items: center;
-  }
+    .side_bar nav ul li a {
+        font-size: 14px; /* Reduz um pouco o tamanho da fonte */
+        padding: 6px 10px; /* Reduz o padding interno */
+    }
 
-  .participante {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    .side_bar {
+        /* Reduz o padding vertical do bloco side_bar */
+        padding: 10px 20px; 
+    }
+    
+    /* Esconde a realização desktop */
+    .realizacao_desktop {
+        display: none; 
+    }
 
-  .participante img {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 15px;
-  }
+    /* 2. CONTEÚDO PRINCIPAL */
+    .conteudo_area {
+        width: 100%;
+        order: 2; 
+        padding: 0; 
+    }
 
-  .participante > div {
-    width: 100%;
-  }
+    .conteudo_bloco {
+        width: 100%;
+        max-width: none; 
+    }
+    
+    /* 3. RODAPÉ MOBILE (REALIZAÇÃO) */
+    .realizacao_mobile_footer {
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        padding: 20px 10px; 
+        background-color: #fff;
+        border-radius: 20px;
+        margin-top: 10px;
+        order: 3; 
+        max-width: 400px; 
+    }
+    
+    .realizacao_mobile_footer h3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .realizacao_mobile_footer img {
+        max-width: 30%; 
+        margin: 5px;
+    }
 
-  .participante h3 {
-    font-size: 20px;
-  }
+    /* Ajustes finais */
+    .banner {
+        max-width: 100%;
+    }
 
-  .participante p {
-    font-size: 15px;
-  }
+    .conteudo_bloco {
+        border-radius: 0;
+    }
+
+    .conteudo h2 {
+        font-size: 20px;
+    }
+
+    .conteudo p {
+        font-size: 15px;
+    }
+}
+
+
+
+/* Smartphones (até 480px) - HEADER Otimizado */
+@media (max-width: 480px) {
+    .header {
+        flex-wrap: wrap; 
+        height: auto; 
+        padding: 10px; 
+    }
+    .participante{
+      flex-direction: column;
+    }
+
+    .central {
+        order: 2; 
+        width: 100%; 
+        margin: 5px 0 0 0; 
+    }
+    
+    .central h2 {
+        font-size: 10px; 
+    }
+
+    .logo_esquerda,
+    .logo_direita {
+        order: 1; 
+        display: flex; 
+        align-items: center;
+    }
+    
+    .logo_esquerda {
+        margin-right: auto; 
+    }
+    
+    .logo_direita {
+        margin-left: auto; 
+    }
+
+    .logo_esquerda img {
+        height: 60px; 
+    }
+
+    .logo_direita img {
+        height: 80px; 
+    }
 }
